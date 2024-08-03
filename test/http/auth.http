@@ -1,0 +1,18 @@
+### Зарегистрировать пользователя
+POST http://localhost:3000/v1/auth
+Content-Type: application/json
+
+{
+  "login" : "winterkl",
+  "password" : "qwerty"
+}
+
+### Получить токен пользователя
+GET http://localhost:3000/v1/auth
+Content-Type: application/json
+
+{
+  "login" : "winterkl",
+  "password" : "qwerty"
+}
+

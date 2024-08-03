@@ -1,0 +1,42 @@
+### Добавить звонок
+POST http://localhost:3000/v1/call
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "caller_id" : "+79006953070",
+  "agent_id" : 1,
+  "call_start" : "2024-04-09T12:23:23Z",
+  "call_end" : "2024-04-09T12:24:23Z",
+  "status_id" : 1
+}
+
+### Получить звонок
+GET http://localhost:3000/v1/call/8
+Content-Type: application/json
+Authorization: {{token}}
+
+### Получить список звонков
+GET http://localhost:3000/v1/call?call_status=1&begin=2024-04-03T00:00:00Z&end=2024-04-09T23:59:59Z&page=1&page_size=3
+Content-Type: application/json
+Authorization: {{token}}
+
+### Обновить звонок
+PUT http://localhost:3000/v1/call/5
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "caller_id" : "+79956953070",
+  "agent_id" : 2,
+  "call_start" : "2024-04-05T12:23:23Z",
+  "call_end" : "2024-04-05T12:24:23Z",
+  "status_id" : 2,
+  "call_notes" : "qwerty"
+}
+
+
+### Удалить звонок
+DELETE http://localhost:3000/v1/call/5
+Content-Type: application/json
+Authorization: {{token}}
